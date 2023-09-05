@@ -1,0 +1,16 @@
+.container.d-flex.align-items-center.justify-content-lg-between {
+    background: rgba(0, 0, 0, 0.8);
+}
+#header .logo a span {
+    color: #934cfa;
+}
+#header .logo {
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: capitalize; 
+    font-family: initial;
+}
