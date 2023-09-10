@@ -573,7 +573,7 @@ section {
 /*--------------------------------------------------------------
   # Clients
   --------------------------------------------------------------*/
-/* .clients {
+ .clients {
 	padding-top: 20px;
   }
   
@@ -603,7 +603,7 @@ section {
   
   .clients .swiper-pagination .swiper-pagination-bullet-active {
 	background-color: #ffc451;
-  } */
+  } 
 
 /*--------------------------------------------------------------
   # Features
