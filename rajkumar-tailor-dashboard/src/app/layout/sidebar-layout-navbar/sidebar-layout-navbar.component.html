@@ -1,0 +1,28 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+        <li class="nav-item nav-profile">
+            <a href="#" class="nav-link">
+                <div class="nav-profile-image">
+                    <img *ngIf="userDetails.profile" [src]="userDetails.profile" alt="{{ userDetails.name.split(' ')[0].charAt(0) }}{{ userDetails.name.split(' ')[1].charAt(0) }}"
+                        style="width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; font-size: 20px;" class="rounded-circle bg-primary text-white mr-2" />
+                    <div *ngIf="!userDetails.profile" class="rounded-circle bg-primary text-white mr-2"
+                        style="width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                        {{ userDetails.name.split(' ')[0].charAt(0) }}{{ userDetails.name.split(' ')[1].charAt(0) }}
+                    </div>
+                    <span class="login-status online"></span> <!--change to offline or busy as needed-->
+                </div>
+                <div class="nav-profile-text d-flex flex-column">
+                    <span class="font-weight-bold mb-2">{{userDetails.name}}</span>
+                    <span class="text-secondary text-small">{{userDetails.role}}</span>
+                </div>
+                <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+            </a>
+        </li>
+        <li class="nav-item" *ngFor="let menu of userDetails.menu">
+            <a class="nav-link" routerLink="{{menu.routerLink}}">
+                <span class="menu-title">{{menu.menuTitle}}</span>
+                <i class="{{menu.menuIcon}}"></i>
+            </a>
+        </li>
+    </ul>
+</nav>
