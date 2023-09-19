@@ -1,0 +1,24 @@
+.auth .brand-logo img {
+	width: 100px;
+	height: 88px;
+}
+
+.logoText {
+	margin-top: 34px;
+	margin-left: 61px;
+}
+
+.btnRegister{
+    float: left;
+    border: none;
+    cursor: pointer;
+}
+.signUpWithIcon{
+    font-size: 30px;
+}
+#login{
+    align-items: right;
+}
+#agree{
+    bottom: 2px;
+}
