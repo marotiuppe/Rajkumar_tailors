@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { TopLayoutNavbarComponent } from './layout/top-layout-navbar/top-layout-navbar.component';
 import { SidebarLayoutNavbarComponent } from './layout/sidebar-layout-navbar/sidebar-layout-navbar.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { DashboardComponent } from './module/dashboard/dashboard.component';
+import { LoginComponent } from './module/login/login.component';
+import { SignUpComponent } from './module/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopLayoutNavbarComponent,
     SidebarLayoutNavbarComponent,
-    FooterComponent
+    FooterComponent,
+    DashboardComponent,
+    LoginComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
