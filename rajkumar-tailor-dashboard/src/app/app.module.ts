@@ -9,6 +9,8 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { DashboardComponent } from './module/dashboard/dashboard.component';
 import { LoginComponent } from './module/login/login.component';
 import { SignUpComponent } from './module/sign-up/sign-up.component';
+import { UserComponent } from './module/user/user.component';
+import { AddUserComponent } from './module/user/add-user/add-user.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { SignUpComponent } from './module/sign-up/sign-up.component';
     FooterComponent,
     DashboardComponent,
     LoginComponent,
-    SignUpComponent
+    SignUpComponent,
+    UserComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,

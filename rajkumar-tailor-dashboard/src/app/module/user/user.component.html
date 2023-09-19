@@ -1,0 +1,62 @@
+<div class="page-header">
+    <h3 class="page-title">
+        <span class="page-title-icon bg-gradient-primary text-white mr-2">
+            <i class="mdi mdi-contacts"></i>
+        </span>
+        User
+    </h3>
+    <nav aria-label="breadcrumb">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">
+                <a class="btnRegister btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" routerLink="addUser">Add User</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="col-lg-12 pl-0 pr-0 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <table class="table">
+                <thead class="bg-gradient-primary">
+                    <tr>
+                        <th><span class="profile">Profile</span></th>
+                        <th>Role</th>
+                        <th>Status</th>
+                        <th>Advance ₹</th>
+                        <th>Total ₹</th>
+                        <th>Remaining ₹</th>
+                        <th>Join Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let customer of usersList ; let i=index">
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <img *ngIf="customer.profileImage" [src]="customer.profileImage" alt="Profile Image" style="width: 45px; height: 45px" class="rounded-circle mr-2" />
+                                <div *ngIf="!customer.profileImage" class="rounded-circle bg-primary text-white mr-2" style="width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                                    {{ customer.profileName.split(' ')[0].charAt(0) }}{{ customer.profileName.split(' ')[1].charAt(0) }}
+                                </div>
+                                <div class="ms-3">
+                                    <p class="fw-bold mb-1">{{customer.profileName}}</p>
+                                    <p class="text-muted mb-0">{{customer.mobileNo}}</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>{{customer.role}}</td>
+                        <td>
+                            <span  *ngIf="customer.status ==1 " class="badge badge-success rounded-pill d-inline">New</span>
+                            <span  *ngIf="customer.status ==2 " class="badge badge-primary rounded-pill d-inline">Active</span>
+                            <span  *ngIf="customer.status ==3 " class="badge badge-danger rounded-pill d-inline">In Active</span>
+                        </td> 
+                        <td>{{customer.advanceAmount}}</td>
+                        <td>{{customer.totalAmount}}</td>
+                        <td>{{customer.remainingAmount}}</td>
+                        <td>{{customer.joinDate}}</td>
+                        <td><button type="button" class="btn btn-link btn-rounded btn-sm fw-bold" data-mdb-ripple-color="dark" > Edit </button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

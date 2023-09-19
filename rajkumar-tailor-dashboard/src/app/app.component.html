@@ -7,6 +7,8 @@
     <div class="main-panel">
       <div class="content-wrapper">
         <app-dashboard *ngIf="loadPage=='dashboard'"></app-dashboard>
+        <app-user *ngIf="loadPage=='user'"></app-user>
+        <app-add-user *ngIf="loadPage=='addUser'"></app-add-user>
       </div>
       <app-footer></app-footer>
     </div>
