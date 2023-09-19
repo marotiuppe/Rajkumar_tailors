@@ -43,6 +43,10 @@ export class AppComponent {
           "menuTitle":"Dashboard",
           "routerLink":"dashboard",
           "menuIcon":"mdi mdi-home menu-icon"
+        },{
+          "menuTitle":"User",
+          "routerLink":"user",
+          "menuIcon":"mdi mdi-account-box menu-icon"
         }
       ]
     }
