@@ -6,8 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
+  userName:any=sessionStorage.getItem("uname");
   recentUpdates:any={
-    "updatedBy":"Maroti Uppe",
+    "updatedBy":this.userName,
     "updatedDate":"October 3rd, 2018",
     "update":[
       "assets/images/dashboard/ganesh.jpg",
@@ -23,21 +24,21 @@ export class DashboardComponent {
     {
       "title":"Total Orders",
       "icon":"mdi mdi-diamond mdi-24px float-right",
-      "count":"95,5741",
+      "count":"9,55,741",
       "variation":"Increased by 5%",
       "bg":"bg-gradient-info"
     },
     {
       "title":"Pending Orders",
       "icon":"mdi mdi-bookmark-outline mdi-24px float-right",
-      "count":"45,6334",
+      "count":"4,56,334",
       "variation":"Decreased by 10%",
       "bg":"bg-gradient-success"
     },
     {
       "title":"Recieved Payment",
       "icon":"mdi mdi-diamond mdi-24px float-right",
-      "count":"15,0000",
+      "count":"1,50,000",
       "variation":"Increased by 60%",
       "bg":"bg-gradient-danger"
     }
