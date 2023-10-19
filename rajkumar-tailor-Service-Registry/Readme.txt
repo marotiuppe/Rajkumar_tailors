@@ -1,0 +1,1 @@
+OLP-Service Registry is used to Manage Service Urls of Other Microservice
