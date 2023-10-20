@@ -1,0 +1,39 @@
+server:
+  port: 9091
+  servlet:
+    context-path: /user-management
+
+spring:
+  application:
+    name: USER-MANAGEMENT
+  datasource:
+    url: jdbc:mysql://localhost:3306/rajkumar-tailor-user-management
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    generate-ddl: false
+    hibernate:
+      ddl-auto: update
+#  mail:
+#    host: smtp.gmail.com
+#    port: 587
+#    username: onlinelearningtest819@gmail.com
+#    password: prsnhkbtqmkkbqsf
+#    properties:
+#      mail.smtp.auth: true
+#      mail.smtp.connectiontimeout: 5000
+#      mail.smtp.timeout: 5000
+#      smtp.writetimeout: 5000
+#      mail.smtp.starttls.enable: true
+      
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:9090/eureka
